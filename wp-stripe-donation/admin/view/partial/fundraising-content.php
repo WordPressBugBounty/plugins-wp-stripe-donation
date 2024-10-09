@@ -25,7 +25,7 @@ _e( 'Enable Fundraising', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -41,7 +41,7 @@ _e( 'Target Amount', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -57,7 +57,7 @@ _e( 'Start Date', WPSD_TXT_DOMAIN );
 				<?php 
 ?>
 					<span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
 					<?php 
 ?>
@@ -73,7 +73,7 @@ _e( 'End Date', WPSD_TXT_DOMAIN );
 				<?php 
 ?>
 					<span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
 					<?php 
 ?>

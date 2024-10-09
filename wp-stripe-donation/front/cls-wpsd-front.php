@@ -7,8 +7,7 @@ require_once WPSD_PATH . 'common/receipt-email-temp.php';
 /** 
  * Master Class: Front
 */
-class Wpsd_Front
-{
+class Wpsd_Front {
     use 
         HM_Currency,
         Wpsd_Common,
@@ -20,15 +19,14 @@ class Wpsd_Front
         Wpsd_Receipt_Email_Temp,
         Wpsd_Fundraising_Content_Settings
     ;
-    private  $wpsd_version ;
-    function __construct( $version )
-    {
+    private $wpsd_version;
+
+    function __construct( $version ) {
         $this->wpsd_version = $version;
         $this->wpsd_assets_prefix = substr( WPSD_PRFX, 0, -1 ) . '-';
     }
-    
-    function wpsd_front_assets()
-    {
+
+    function wpsd_front_assets() {
         // searchable dropdown select Style
         //wp_register_style('wbg-selectize', '//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css');
         wp_enqueue_style(
@@ -66,7 +64,7 @@ class Wpsd_Front
         wp_enqueue_script(
             $this->wpsd_assets_prefix . 'front',
             WPSD_ASSETS . 'js/' . $this->wpsd_assets_prefix . 'front.js',
-            array( 'jquery' ),
+            array('jquery'),
             $this->wpsd_version,
             TRUE
         );
@@ -100,23 +98,20 @@ class Wpsd_Front
         );
         wp_localize_script( $this->wpsd_assets_prefix . 'front', 'wpsdAdminScriptObj', $wpsdAdminArray );
     }
-    
-    function wpsd_load_shortcode()
-    {
-        add_shortcode( 'wp_stripe_donation', array( $this, 'wpsd_load_shortcode_view' ) );
+
+    function wpsd_load_shortcode() {
+        add_shortcode( 'wp_stripe_donation', array($this, 'wpsd_load_shortcode_view') );
     }
-    
-    function wpsd_load_shortcode_view( $attr )
-    {
+
+    function wpsd_load_shortcode_view( $attr ) {
         $output = '';
         ob_start();
         include plugin_dir_path( __FILE__ ) . '/view/payment-form.php';
         $output .= ob_get_clean();
         return $output;
     }
-    
-    function wpsd_load_donors_panel()
-    {
+
+    function wpsd_load_donors_panel() {
         $wpsdDonations = $this->wpsd_get_all_donations_full();
         $output = '';
         ob_start();
@@ -124,17 +119,13 @@ class Wpsd_Front
         $output .= ob_get_clean();
         return $output;
     }
-    
-    function wpsd_donation_handler()
-    {
-        
+
+    function wpsd_donation_handler() {
         if ( !check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
             wp_send_json_error( 'Invalid security token sent.' );
             wp_die();
         }
-        
-        
-        if ( !empty($_POST['email']) && !empty($_POST['amount']) && !empty($_POST['donation_for']) ) {
+        if ( !empty( $_POST['email'] ) && !empty( $_POST['amount'] ) && !empty( $_POST['donation_for'] ) ) {
             $wpsdDonationFor = sanitize_text_field( $_POST['donation_for'] );
             $name = sanitize_email( $_POST['name'] );
             $wpsdEmail = sanitize_email( $_POST['email'] );
@@ -160,7 +151,6 @@ class Wpsd_Front
                 include WPSD_PATH . 'stripe/init.php';
             }
             $google_response = true;
-            
             if ( $google_response ) {
                 try {
                     \Stripe\Stripe::setApiKey( base64_decode( $wpsdStripeKey ) );
@@ -170,20 +160,19 @@ class Wpsd_Front
                         'description'   => $wpsdDonationFor,
                         'receipt_email' => $receiptEmail,
                         'metadata'      => [
-                        'integration_check' => 'accept_a_payment',
-                    ],
+                            'integration_check' => 'accept_a_payment',
+                        ],
                         'shipping'      => [
-                        'name'    => $name,
-                        'address' => [
-                        'line1'       => $address_street . ' ' . $address_line2,
-                        'postal_code' => $address_postal,
-                        'city'        => $address_city,
-                        'state'       => $address_state,
-                        'country'     => $address_country,
-                    ],
-                    ],
+                            'name'    => $name,
+                            'address' => [
+                                'line1'       => $address_street . ' ' . $address_line2,
+                                'postal_code' => $address_postal,
+                                'city'        => $address_city,
+                                'state'       => $address_state,
+                                'country'     => $address_country,
+                            ],
+                        ],
                     ] );
-                    
                     if ( '' !== $paymentIntent->client_secret ) {
                         wp_send_json_success( array(
                             'status'        => 'success',
@@ -195,7 +184,6 @@ class Wpsd_Front
                             'message' => __( 'Something went wrong!', WPSD_TXT_DOMAIN ),
                         ) );
                     }
-                
                 } catch ( \Stripe\Exception\CardException $e ) {
                     wp_send_json_success( array(
                         'status'  => 'error',
@@ -253,15 +241,11 @@ class Wpsd_Front
                     'message' => __( 'reCaptcha verification failed!', WPSD_TXT_DOMAIN ),
                 ) );
             }
-        
         }
-    
     }
-    
-    function wpsd_donation_handler_success()
-    {
-        
-        if ( !empty($_POST['email']) && !empty($_POST['amount']) && !empty($_POST['name']) && !empty($_POST['donation_for']) ) {
+
+    function wpsd_donation_handler_success() {
+        if ( !empty( $_POST['email'] ) && !empty( $_POST['amount'] ) && !empty( $_POST['name'] ) && !empty( $_POST['donation_for'] ) ) {
             $wpsdDonationFor = sanitize_text_field( $_POST['donation_for'] );
             $wpsdName = sanitize_text_field( $_POST['name'] );
             $wpsdEmail = sanitize_email( $_POST['email'] );
@@ -310,9 +294,8 @@ class Wpsd_Front
                 'status' => 'success',
             ) ) );
         }
-    
     }
-    
+
     function wpsd_save_donation_info(
         $wpsdDonationFor,
         $wpsdName,
@@ -320,9 +303,8 @@ class Wpsd_Front
         $wpsdAmount,
         $wpsdCurrency,
         $comments
-    )
-    {
-        global  $wpdb ;
+    ) {
+        global $wpdb;
         $address_street = sanitize_text_field( $_POST['address'][0]['address_street'] );
         $address_line2 = sanitize_text_field( $_POST['address'][0]['address_line2'] );
         $address_city = sanitize_text_field( $_POST['address'][0]['address_city'] );
@@ -379,7 +361,7 @@ class Wpsd_Front
 			"' . $wpsd_fundraising_end_date . '"
 		)' );
     }
-    
+
     function wpsd_email_to_admin(
         $wpsdDonationEmail,
         $wpsdName,
@@ -387,9 +369,8 @@ class Wpsd_Front
         $wpsdCurrency,
         $wpsdDonationFor,
         $wpsdEmail
-    )
-    {
-        $headers = array( 'Content-Type: text/html; charset=UTF-8' );
+    ) {
+        $headers = array('Content-Type: text/html; charset=UTF-8');
         $wpsdEmailSubject = __( 'New Donation Received!', WPSD_TXT_DOMAIN );
         $wpsdEmailMessage = __( 'Name: ' ) . $wpsdName;
         $wpsdEmailMessage .= '<br>' . __( 'Email: ', WPSD_TXT_DOMAIN ) . $wpsdEmail;
@@ -402,15 +383,14 @@ class Wpsd_Front
             $headers
         );
     }
-    
+
     function wpsd_email_to_client(
         $wpsdEmail,
         $wpsdName,
         $wpsdAmount,
         $wpsdCurrency,
         $wpsdDonationFor
-    )
-    {
+    ) {
         $wpsdEmailSettings = $this->wpsd_get_email_content_settings();
         foreach ( $wpsdEmailSettings as $option_name => $option_value ) {
             if ( isset( $wpsdEmailSettings[$option_name] ) ) {
@@ -432,7 +412,6 @@ class Wpsd_Front
         $wpsdEmailTempSettings = get_option( 'wpsd_receipt_email_temp_settings' );
         $wpsd_email_temp_layout = ( isset( $wpsdEmailTempSettings['wpsd_email_temp_layout'] ) ? $wpsdEmailTempSettings['wpsd_email_temp_layout'] : 'default' );
         $donorEmailMessage = $this->get_receipt_email_temp( $wpsd_email_temp_layout, $wsd_email_arr );
-        
         if ( !$wpsd_disable_receipt_email ) {
             return wp_mail(
                 $wpsdEmail,
@@ -443,18 +422,15 @@ class Wpsd_Front
         } else {
             return true;
         }
-    
     }
-    
-    function wpsd_rand_string( $length )
-    {
+
+    function wpsd_rand_string( $length ) {
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         return substr( str_shuffle( $chars ), 0, $length );
     }
-    
-    function wpsd_get_total_donation_today()
-    {
-        global  $wpdb ;
+
+    function wpsd_get_total_donation_today() {
+        global $wpdb;
         $table_name = WPSD_TABLE;
         $val = $wpdb->get_var( "SELECT sum(wpsd_donated_amount) FROM {$table_name} WHERE CAST(wpsd_donation_datetime AS DATE) =  CURDATE()" );
         if ( $val > 0 ) {
@@ -462,9 +438,8 @@ class Wpsd_Front
         }
         return 0;
     }
-    
-    function wpsd_multiplying_currencies( $amount, $currency )
-    {
+
+    function wpsd_multiplying_currencies( $amount, $currency ) {
         $zero_decimal_currencies = [
             'BIF',
             'CLP',
@@ -488,10 +463,9 @@ class Wpsd_Front
         }
         return $amount;
     }
-    
-    function get_fundraising_amount()
-    {
-        global  $wpdb ;
+
+    function get_fundraising_amount() {
+        global $wpdb;
         $table_name = WPSD_TABLE;
         $val = $wpdb->get_row( "SELECT SUM(wpsd_donated_amount) AS Total_Amount, COUNT(*) AS Total_Donation FROM wp_wpsd_stripe_donation WHERE fundraising = 'on' AND ( CURDATE() BETWEEN CAST(fundraising_start_date AS DATE) AND CAST(fundraising_end_date AS DATE))" );
         if ( $val->Total_Amount > 0 ) {
@@ -505,9 +479,8 @@ class Wpsd_Front
             'donations' => 0,
         ];
     }
-    
-    function wpsd_verify_google_captcha( $key, $res )
-    {
+
+    function wpsd_verify_google_captcha( $key, $res ) {
         $url = "https://www.google.com/recaptcha/api/siteverify?secret={$key}&response={$res}";
         $response = wp_remote_get( $url, array(
             'timeout'    => 20,

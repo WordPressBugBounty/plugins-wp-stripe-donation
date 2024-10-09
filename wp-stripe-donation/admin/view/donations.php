@@ -60,6 +60,6 @@ print_column_headers( 'wpsd-column-table', false );
 <?php 
 ?>
     <button type="button" class="button button-warning"><i class="fa fa-warning" aria-hidden="true"></i>&nbsp;<?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade to Professional to unlock all donations, delete option and Export to CSV', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade to Professional to unlock all donations, delete option and Export to CSV', WPSD_TXT_DOMAIN ) . '</a>';
 ?></button>
     

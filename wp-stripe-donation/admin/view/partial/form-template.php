@@ -25,14 +25,14 @@ _e( 'Classic', WPSD_TXT_DOMAIN );
             <td style="width: 50px;">
                 <input type="radio" name="wpsd_form_template" id="wpsd_form_temp_classic" value="classic" <?php 
 if ( 'classic' === $wpsd_form_template ) {
-    echo  'checked' ;
+    echo 'checked';
 }
 ?>>
             </td>
             <td style="background: #999;">
                 <label for="wpsd_form_temp_classic" class="wpsd_form_temp_classic">
                     <img src="<?php 
-echo  esc_url( WPSD_ASSETS ) ;
+echo esc_url( WPSD_ASSETS );
 ?>img/aidwp-temp-classic.webp" alt="<?php 
 _e( 'Classic', WPSD_TXT_DOMAIN );
 ?>" height="300px">
@@ -49,7 +49,7 @@ _e( 'Modern', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -57,7 +57,7 @@ echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Profess
             <td style="background: #999;">
                 <label for="wpsd_form_temp_modern" class="wpsd_form_temp_modern">
                     <img src="<?php 
-echo  esc_url( WPSD_ASSETS ) ;
+echo esc_url( WPSD_ASSETS );
 ?>img/aidwp-temp-modern.webp" alt="<?php 
 _e( 'Modern', WPSD_TXT_DOMAIN );
 ?>" height="300px">

@@ -37,19 +37,15 @@ $wpsdKeySettings = get_option( 'wpsd_recaptcha_Settings' );
 $wpsd_enable_recaptcha = ( isset( $wpsdKeySettings['wpsd_enable_recaptcha'] ) ? esc_html( $wpsdKeySettings['wpsd_enable_recaptcha'] ) : 'off' );
 $wpsd_recaptcha_site_key = ( isset( $wpsdKeySettings['wpsd_recaptcha_site_key'] ) ? esc_html( $wpsdKeySettings['wpsd_recaptcha_site_key'] ) : '' );
 $wpsd_donation_values = ( $wpsd_donation_values != '' ? explode( ',', rtrim( $wpsd_donation_values, ',' ) ) : [] );
-
 if ( 'tdb' === $wpsd_form_header_type ) {
-    $form_header_type = [ 'title', 'description', 'banner' ];
+    $form_header_type = ['title', 'description', 'banner'];
 } else {
-    
     if ( 'btd' === $wpsd_form_header_type ) {
-        $form_header_type = [ 'banner', 'title', 'description' ];
+        $form_header_type = ['banner', 'title', 'description'];
     } else {
-        $form_header_type = [ 'title', 'banner', 'description' ];
+        $form_header_type = ['title', 'banner', 'description'];
     }
-
 }
-
 $wpsdCaptchaItem1 = rand( 1, 20 );
 $wpsdCaptchaItem2 = rand( 1, 20 );
 $currancy_symbol = $this->hm_get_currency_symbol( $wpsd_donate_currency );

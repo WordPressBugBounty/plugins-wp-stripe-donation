@@ -25,12 +25,12 @@ _e( 'Email Template', WPSD_TXT_DOMAIN );
                 <td>
                     <input type="radio" name="wpsd_email_temp_layout" id="wpsd_email_temp_layout_default" value="default" <?php 
 if ( 'default' === $wpsd_email_temp_layout ) {
-    echo  'checked' ;
+    echo 'checked';
 }
 ?>>
                     <label for="wpsd_email_temp_layout_default">
                         <img src="<?php 
-echo  esc_url( WPSD_ASSETS . 'img/receipt-temp/default.jpg' ) ;
+echo esc_url( WPSD_ASSETS . 'img/receipt-temp/default.jpg' );
 ?>" alt="<?php 
 _e( 'Default', WPSD_TXT_DOMAIN );
 ?>" width="400px">
@@ -43,7 +43,7 @@ _e( 'Default', WPSD_TXT_DOMAIN );
 ?>
                     <label for="wpsd_email_temp_layout_html">
                         <img src="<?php 
-echo  esc_url( WPSD_ASSETS . 'img/receipt-temp/html.jpg' ) ;
+echo esc_url( WPSD_ASSETS . 'img/receipt-temp/html.jpg' );
 ?>" alt="<?php 
 _e( 'HTML', WPSD_TXT_DOMAIN );
 ?>" width="400px">
@@ -52,7 +52,7 @@ _e( 'HTML', WPSD_TXT_DOMAIN );
 ?>
                         <br>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'For HTML Template Upgrade to Professional', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'For HTML Template Upgrade to Professional', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>

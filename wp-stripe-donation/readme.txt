@@ -2,9 +2,9 @@
 Contributors: mhmrajib, hmplugin, freemius
 Donate link: https://www.paypal.me/mhmrajib
 Tags: charity, donations, stripe, payments, stripe gateway, stripe payments
-Requires at least: 5.2
-Tested up to: 6.4.3
-Stable tag: 3.2.3
+Requires at least: 5.4
+Tested up to: 6.6.2
+Stable tag: 3.2.4
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -247,15 +247,17 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 
 == Changelog ==
 
-= 3.2.3 =
+= 3.2.4 =
+* Freemius SDK update to 2.8.1
+* Minor bug fixed
 
+= 3.2.3 =
 * Stripe js loading in the donation form only
 * Code reorganized
 * Amount last value comma issue fixed
 * Form template page added
 
 = 3.2.2 =
-
 * Freemius SDK updated to 2.6.2
 * Font Awesome Free 6.1.1 integrated
 * Responsive issue fixed
@@ -269,7 +271,6 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * Freemius SDK update to 2.5.10
 
 = 3.2.0 =
-
 * Code optimized
 * Freemius SDK upgraded
 
@@ -286,7 +287,6 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * Form settings page image help popup added
 
 = 3.1.7 =
-
 * Assets loading issue fixed
 * Form required field symbol added
 
@@ -296,7 +296,6 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * Freemius sdk updated
 
 = 3.1.5 =
-
 * Freemius sdk updated
 * Admin sidebar improved
 * Form label color option added
@@ -323,14 +322,12 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * Code optimized
 
 = 3.1 =
-
 * Recept email format improved
 * Form amount label hide and applied to amount placeholder
 * Admin css improved
 * Code optimized
 
 = 3.0 =
-
 * Donation form extra space issue fixed
 * Code optimized
 * CSS fixed
@@ -343,7 +340,6 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * Card element font default color changed
 
 = 2.8 =
-
 * Receipt remail default webmaster@!yourdomain issue fixed
 * Form loader gif security issue solved
 * Card element font color issue fixed
@@ -351,19 +347,16 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 * 7 New languages added
 
 = 2.7 =
-
 * Secure Ajax Requests with Nonces
 * Stripe SDK exclude option to avoid conflict
 * Error message organized
 * Email validation bug fixed
 
 = 2.6 =
-
 * Fontawesome icon pack added
 * Code optimized and organized
 
 = 2.5 =
-
 * Card Element console error fixed in other page
 * Load stripe checkout script at footer
 * Usage video tutorial added to Usage & Tutorial page

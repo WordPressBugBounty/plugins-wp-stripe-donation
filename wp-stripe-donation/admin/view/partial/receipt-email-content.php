@@ -61,7 +61,7 @@ esc_html_e( $wpsd_re_email_greeting );
 ?></textarea>
                     <br>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -98,7 +98,7 @@ _e( 'Disable Plugin Receipt Email', WPSD_TXT_DOMAIN );
 ?>
                     <input type="checkbox">
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -115,7 +115,7 @@ _e( 'Disable Stripe Receipt Email', WPSD_TXT_DOMAIN );
 ?>
                     <input type="checkbox">
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -134,7 +134,7 @@ _e( 'From Name', WPSD_TXT_DOMAIN );
 esc_attr_e( $wpsd_re_from_name );
 ?>" readonly>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -153,7 +153,7 @@ _e( 'From Email', WPSD_TXT_DOMAIN );
 esc_attr_e( $wpsd_re_from_email );
 ?>" readonly>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>

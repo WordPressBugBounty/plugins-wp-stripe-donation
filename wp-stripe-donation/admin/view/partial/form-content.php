@@ -24,7 +24,7 @@ _e( 'Template Color', WPSD_TXT_DOMAIN );
             <td colspan="3">
                 <div class="wpsd-template-selector">
                     <?php 
-for ( $i = 0 ;  $i < 5 ;  $i++ ) {
+for ($i = 0; $i < 5; $i++) {
     ?>
                     <div class="wpsd-template-item">
                         <input type="radio" name="wpsd_select_template" id="<?php 
@@ -34,7 +34,7 @@ for ( $i = 0 ;  $i < 5 ;  $i++ ) {
     ?>"
                             <?php 
     if ( $wpsd_select_template == $i ) {
-        echo  'checked' ;
+        echo 'checked';
     }
     ?>>
                         <label for="<?php 
@@ -56,12 +56,12 @@ _e( 'Display Banner', WPSD_TXT_DOMAIN );
 ?></label>
                 <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                 <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-display-banner.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-display-banner.webp' );
 ?>" class="wpsd-admin-help-img">
             </th>
             <td>
                 <input type="checkbox" name="wpsd_display_banner" class="wpsd_display_banner" id="wpsd_display_banner" value="1" <?php 
-echo  ( $wpsd_display_banner ? 'checked' : '' ) ;
+echo ( $wpsd_display_banner ? 'checked' : '' );
 ?> >
             </td>
             <th scope="row" style="text-align: right;">
@@ -84,14 +84,14 @@ if ( intval( $wpsd_form_banner ) > 0 ) {
         'full',
         false,
         array(
-        'id' => 'wpsd-form-banner-preview-image',
-    )
+            'id' => 'wpsd-form-banner-preview-image',
+        )
     );
 }
 ?>
                 <div id="wpsd-form-banner-preview-image">
                     <?php 
-echo  $wpsdFormBannerImage ;
+echo $wpsdFormBannerImage;
 ?>
                 </div>
             </td>
@@ -103,12 +103,12 @@ _e( 'Hide All Form Label', WPSD_TXT_DOMAIN );
 ?></label>
                 <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                 <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-label.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-label.webp' );
 ?>" class="wpsd-admin-help-img">
             </th>
             <td colspan="3">
                 <input type="checkbox" name="wpsd_hide_label" id="wpsd_hide_label" value="1" <?php 
-echo  ( $wpsd_hide_label ? 'checked' : '' ) ;
+echo ( $wpsd_hide_label ? 'checked' : '' );
 ?> >
             </td>
         </tr>
@@ -119,7 +119,7 @@ _e( 'Hide Donation For', WPSD_TXT_DOMAIN );
 ?></label>
                 <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                 <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-donation-for-options.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-donation-for-options.webp' );
 ?>" class="wpsd-admin-help-img">
                 <br>
                 <small><?php 
@@ -130,7 +130,7 @@ _e( 'If you hide this, please make sure you must have only one donation for avai
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -189,7 +189,7 @@ _e( 'Display Address', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -203,7 +203,7 @@ _e( 'Address Street Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -219,7 +219,7 @@ _e( 'Address Line-2 Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -235,7 +235,7 @@ _e( 'Address City Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -251,7 +251,7 @@ _e( 'Address State Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -267,7 +267,7 @@ _e( 'Postal Code Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -283,7 +283,7 @@ _e( 'Country Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -299,7 +299,7 @@ _e( 'Show Comments', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -313,7 +313,7 @@ _e( 'Comments Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -329,7 +329,7 @@ _e( 'Show Captcha', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -343,7 +343,7 @@ _e( 'Captcha Label', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -404,7 +404,7 @@ _e( 'Form Width', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -420,7 +420,7 @@ _e( 'Form Header Type', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -436,7 +436,7 @@ _e( 'Form Button Width', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -449,14 +449,14 @@ _e( 'Display Total Donation Today', WPSD_TXT_DOMAIN );
 ?></label>
                 <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                 <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-total-donation.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-total-donation.webp' );
 ?>" class="wpsd-admin-help-img">
             </th>
             <td colspan="3">
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -469,14 +469,14 @@ _e( 'Display Condition 1', WPSD_TXT_DOMAIN );
 ?></label>
                 <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                 <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-condition-one.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-condition-one.webp' );
 ?>" class="wpsd-admin-help-img">
             </th>
             <td>
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -490,7 +490,7 @@ _e( 'Condition 1 Text', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>

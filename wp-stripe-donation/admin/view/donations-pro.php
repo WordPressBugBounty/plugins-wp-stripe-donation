@@ -77,13 +77,12 @@ if ( count( $wpsdDonations ) > 0 ) {
         esc_html_e( $donation->wpsd_donator_email );
         ?></td>
                                 <td><?php 
-        echo  date( 'M d, Y h:i A', strtotime( $donation->wpsd_donation_datetime ) ) ;
+        echo date( 'M d, Y h:i A', strtotime( $donation->wpsd_donation_datetime ) );
         ?></td>
                                 <td><?php 
         esc_html_e( $donation->wpsd_comments );
         ?></td>
                                 <?php 
-        
         if ( wsd_fs()->is_plan( 'pro', true ) ) {
             ?>
                                     <td><?php 
@@ -102,20 +101,19 @@ if ( count( $wpsdDonations ) > 0 ) {
             esc_html_e( $donation->wpsd_country );
             ?></td>
                                     <td><?php 
-            echo  ( 'y' === $donation->wpsd_condition_one ? 'Yes' : '' ) ;
+            echo ( 'y' === $donation->wpsd_condition_one ? 'Yes' : '' );
             ?></td>
                                     <td><?php 
-            echo  ( 'on' === $donation->fundraising ? 'Yes' : '' ) ;
+            echo ( 'on' === $donation->fundraising ? 'Yes' : '' );
             ?></td>
                                     <td><?php 
-            echo  ( 'on' === $donation->fundraising ? date( 'M d, Y', strtotime( $donation->fundraising_start_date ) ) : null ) ;
+            echo ( 'on' === $donation->fundraising ? date( 'M d, Y', strtotime( $donation->fundraising_start_date ) ) : null );
             ?></td>
                                     <td><?php 
-            echo  ( 'on' === $donation->fundraising ? date( 'M d, Y', strtotime( $donation->fundraising_end_date ) ) : null ) ;
+            echo ( 'on' === $donation->fundraising ? date( 'M d, Y', strtotime( $donation->fundraising_end_date ) ) : null );
             ?></td>
                                     <?php 
         }
-        
         ?>
                                 <td>
                                     <span class="delReq">

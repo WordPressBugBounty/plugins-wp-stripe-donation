@@ -10,7 +10,7 @@ printf( '%d', $wpsd_select_template );
 
     <div id="wpsd-pageloader">
         <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/loader.gif' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/loader.gif' );
 ?>" alt="<?php 
 _e( 'Processing', WPSD_TXT_DOMAIN );
 ?>" />
@@ -20,7 +20,6 @@ _e( 'Processing', WPSD_TXT_DOMAIN );
 $fht = 0;
 foreach ( $form_header_type as $type ) {
     if ( 'title' === $type ) {
-        
         if ( '' !== $wpsd_payment_title ) {
             ?>
                 <h3 class="wpsd-form-title"><?php 
@@ -29,30 +28,27 @@ foreach ( $form_header_type as $type ) {
                 <div class="wpsd-form-title-border"></div>
                 <?php 
         }
-    
     }
     if ( 'description' === $type ) {
-        
         if ( '' !== $wpsd_form_description ) {
             ?>
                 <div class="wpsd-form-description"><?php 
-            echo  wp_kses_post( $wpsd_form_description ) ;
+            echo wp_kses_post( $wpsd_form_description );
             ?></div>
                 <?php 
         }
-    
     }
     if ( 'banner' === $type ) {
         if ( $wpsd_display_banner ) {
             if ( intval( $wpsd_form_banner ) > 0 ) {
-                echo  wp_get_attachment_image(
+                echo wp_get_attachment_image(
                     $wpsd_form_banner,
                     'full',
                     false,
                     array(
-                    'class' => 'wpsd-form-banner',
-                )
-                ) ;
+                        'class' => 'wpsd-form-banner',
+                    )
+                );
             }
         }
     }
@@ -81,7 +77,7 @@ if ( count( $wpsd_donation_values ) > 0 ) {
                                     <label for="amount_<?php 
         esc_attr_e( trim( $amount ) );
         ?>"><?php 
-        echo  esc_html( $currancy_symbol ) . esc_html( number_format( $amount ) ) ;
+        echo esc_html( $currancy_symbol ) . esc_html( number_format( $amount ) );
         ?></label>
                                 </div>
                             </li>
@@ -89,7 +85,6 @@ if ( count( $wpsd_donation_values ) > 0 ) {
         //}
     }
 }
-
 if ( '' !== $wpsd_other_amount_text ) {
     ?>
                     <li>
@@ -99,7 +94,6 @@ if ( '' !== $wpsd_other_amount_text ) {
                     </li>
                     <?php 
 }
-
 ?>
                 <li class="wpsd_donate_amount_other_li">
                     <div class="form-group">
@@ -115,9 +109,7 @@ esc_html_e( $currancy_symbol );
 
             <?php 
 // Donation/Payment For
-
 if ( !$wpsd_hide_donation_for ) {
-    
     if ( !$wpsd_hide_label ) {
         ?>
                     <label for="wpsd_donation_for" class="wpsd-donation-form-label"><?php 
@@ -125,7 +117,6 @@ if ( !$wpsd_hide_donation_for ) {
         ?></label>
                     <?php 
     }
-    
     ?>
                 <select name="wpsd_donation_for" id="wpsd_donation_for" class="wpsd-text-field">
                     <?php 
@@ -151,9 +142,7 @@ if ( !$wpsd_hide_donation_for ) {
     ?>" >
                 <?php 
 }
-
 // Full Name
-
 if ( !$wpsd_hide_label ) {
     ?>
                 <label for="wpsd_donator_name" class="wpsd-donation-form-label"><?php 
@@ -161,7 +150,6 @@ if ( !$wpsd_hide_label ) {
     ?>&nbsp;<span class="required-sign">*</span></label>
                 <?php 
 }
-
 ?>
             <input type="text" name="wpsd_donator_name" id="wpsd_donator_name" class="wpsd-text-field" placeholder="<?php 
 esc_attr_e( $wpsd_donator_name_label );
@@ -169,7 +157,6 @@ esc_attr_e( $wpsd_donator_name_label );
             
             <!-- Email -->
             <?php 
-
 if ( !$wpsd_hide_label ) {
     ?>
                 <label for="wpsd_donator_email" class="wpsd-donation-form-label"><?php 
@@ -177,7 +164,6 @@ if ( !$wpsd_hide_label ) {
     ?>&nbsp;<span class="required-sign">*</span></label>
                 <?php 
 }
-
 ?>
             <input type="email" name="wpsd_donator_email" id="wpsd_donator_email" class="wpsd-text-field" placeholder="<?php 
 esc_attr_e( $wpsd_donator_email_label );
@@ -185,7 +171,6 @@ esc_attr_e( $wpsd_donator_email_label );
             
             <?php 
 // Phone
-
 if ( $wpsd_display_phone ) {
     ?>
                 <label for="wpsd_donator_phone" class="wpsd-donation-form-label"><?php 
@@ -196,7 +181,6 @@ if ( $wpsd_display_phone ) {
     ?>">
                 <?php 
 }
-
 ?>
             
             <?php 
@@ -204,7 +188,6 @@ if ( $wpsd_display_phone ) {
 
             <!-- Card --->
             <?php 
-
 if ( !$wpsd_hide_label ) {
     ?>
                 <label class="wpsd-donation-form-label"><?php 
@@ -212,7 +195,6 @@ if ( !$wpsd_hide_label ) {
     ?>&nbsp;<span class="required-sign">*</span></label>
                 <?php 
 }
-
 ?>
             <div id="card-element"></div>
             <script src="https://js.stripe.com/v3/"></script>

@@ -32,7 +32,7 @@ _e( 'Border Width', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -46,7 +46,7 @@ _e( 'Border Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -60,7 +60,7 @@ _e( 'Border Radius', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -76,7 +76,7 @@ _e( 'Padding', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -92,7 +92,7 @@ _e( 'Background Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -106,7 +106,7 @@ _e( 'Font Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -129,7 +129,7 @@ _e( 'Border Width', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -143,7 +143,7 @@ _e( 'Border Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -157,7 +157,7 @@ _e( 'Border Radius', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -173,7 +173,7 @@ _e( 'Padding', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                     <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                     <?php 
 ?>
@@ -189,7 +189,7 @@ _e( 'Background Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -203,7 +203,7 @@ _e( 'Font Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -217,7 +217,7 @@ _e( 'Font Size', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -240,7 +240,7 @@ _e( 'Background Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -254,7 +254,7 @@ _e( 'Background Color Hover', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -270,7 +270,7 @@ _e( 'Font Color', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -284,7 +284,7 @@ _e( 'Font Color Hover', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>
@@ -298,7 +298,7 @@ _e( 'Font Size', WPSD_TXT_DOMAIN );
                 <?php 
 ?>
                         <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>

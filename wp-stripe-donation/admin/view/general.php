@@ -60,7 +60,7 @@ _e( 'Disable Admin Email Notification', WPSD_TXT_DOMAIN );
                             <?php 
 ?>
                                 <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Please Upgrade Now!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                                 <?php 
 ?>
@@ -73,7 +73,7 @@ _e( 'Form Header Title', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-header-title.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-header-title.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td colspan="3">
@@ -90,7 +90,7 @@ _e( 'Form Description', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-desc.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-desc.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td colspan="3">
@@ -109,7 +109,7 @@ _e( 'Donation For Options', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-donation-for-options.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-donation-for-options.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td colspan="3">
@@ -130,7 +130,7 @@ _e( 'Form Amounts', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-amounts.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-amounts.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td>
@@ -161,7 +161,7 @@ _e( 'Form Submit Button Text', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-button-text.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-button-text.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td colspan="3">
@@ -178,7 +178,7 @@ _e( 'Currency', WPSD_TXT_DOMAIN );
 ?></label>
                             <span class="dashicons dashicons-info-outline wpsd-admin-icon"></span>
                             <img src="<?php 
-echo  esc_attr( WPSD_ASSETS . 'img/wpsd-form-currency.webp' ) ;
+echo esc_attr( WPSD_ASSETS . 'img/wpsd-form-currency.webp' );
 ?>" class="wpsd-admin-help-img">
                         </th>
                         <td colspan="3">
@@ -191,7 +191,7 @@ foreach ( $wpsdCurrency as $wpsdcurr ) {
     esc_attr_e( $wpsdcurr->abbreviation );
     ?>" <?php 
     if ( $wpsd_donate_currency === $wpsdcurr->abbreviation ) {
-        echo  'selected' ;
+        echo 'selected';
     }
     ?> >
                                         <?php 
@@ -218,7 +218,7 @@ _e( 'Redirect Thank You Page', WPSD_TXT_DOMAIN );
                             <?php 
 ?>
                                 <span><?php 
-echo  '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>' ;
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                                 <?php 
 ?>
@@ -233,7 +233,7 @@ _e( 'Exclude Stripe SDK', WPSD_TXT_DOMAIN );
                         <td colspan="3">
                             <input type="checkbox" name="wpsd_exclude_stripe_sdk" class="wpsd_exclude_stripe_sdk" id="wpsd_exclude_stripe_sdk" value="1" 
                                 <?php 
-echo  ( $wpsd_exclude_stripe_sdk ? 'checked' : '' ) ;
+echo ( $wpsd_exclude_stripe_sdk ? 'checked' : '' );
 ?>>
                             <code><?php 
 _e( 'Check this if your form keeps loading!', WPSD_TXT_DOMAIN );
