@@ -6,7 +6,15 @@
     var wpsdColorPicker = ['#wpsd_form_border_color', '#wpsd_form_bg_color', '#wpsd_form_input_border_color', '#wpsd_form_input_bg_color', '#wpsd_form_input_font_color',
         '#wpsd_form_font_color', '#wpsd_button_bg_color', '#wpsd_button_font_color',
         '#wpsd_button_bg_color_hover',
-        '#wpsd_button_font_color_hover'
+        '#wpsd_button_font_color_hover',
+        '#wpsd_fund_raising_progress_color',
+        '#wpsd_fund_raising_progress_bg_color',
+        '#wpsd_fundraising_raised_label_color',
+        '#wpsd_fundraising_raised_vol_color',
+        '#wpsd_fundraising_goal_label_color',
+        '#wpsd_fundraising_goal_vol_color',
+        '#wpsd_fundraising_donations_label_color',
+        '#wpsd_fundraising_donations_vol_color'
     ];
 
     $.each(wpsdColorPicker, function(index, value) {
@@ -136,6 +144,18 @@
                 }
             });
         });
+    });
+
+    $("#wpsd_fundraising_start_date").datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+    });
+
+    $("#wpsd_fundraising_end_date").datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
     });
 
 })(jQuery);

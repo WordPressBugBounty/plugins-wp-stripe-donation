@@ -77,4 +77,28 @@ if ( ! defined( 'ABSPATH' ) ) {
     .wpsd-form-item-half-right {
         padding-left: 5px;
     }
+    .wpsd-animated-progress.progress-green span {
+        background-color: <?php esc_attr_e( $wpsd_fund_raising_progress_color ); ?> !important;
+    }
+    .wpsd-animated-progress {
+        background-color: <?php esc_attr_e( $wpsd_fund_raising_progress_bg_color ); ?> !important;
+    }
+    .wpsd-fundraising-table .wpsd-fr-rasied-label {
+        color: <?php esc_attr_e( $wpsd_fundraising_raised_label_color ); ?>;
+    }
+    .wpsd-fundraising-table .wpsd-fr-rasied-volume {
+        color: <?php esc_attr_e( $wpsd_fundraising_raised_vol_color ); ?>;
+    }
+    .wpsd-fundraising-table .wpsd-fr-goal-label {
+        color: <?php esc_attr_e( $wpsd_fundraising_goal_label_color ); ?>;
+    }
+    .wpsd-fundraising-table .wpsd-fr-goal-volume {
+        color: <?php esc_attr_e( $wpsd_fundraising_goal_vol_color ); ?>;
+    }
+    .wpsd-fundraising-table .wpsd-fr-donation-label {
+        color: <?php esc_attr_e( $wpsd_fundraising_donations_label_color ); ?>;
+    }
+    .wpsd-fundraising-table .wpsd-fr-donation-volume {
+        color: <?php esc_attr_e( $wpsd_fundraising_donations_vol_color ); ?>;
+    }
 </style>

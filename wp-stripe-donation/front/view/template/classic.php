@@ -201,6 +201,24 @@ if ( !$wpsd_hide_label ) {
             <!--- card end-->
 
             <?php 
+if ( $wpsd_show_captcha ) {
+    if ( !$wpsd_hide_label ) {
+        ?>
+                    <label class="wpsd-donation-form-label wpsd-captcha-label"><?php 
+        esc_html_e( $wpsd_captcha_label );
+        ?>&nbsp;<span class="required-sign">*</span></label>
+                    <?php 
+    }
+    ?>
+                <label class="wpsd-donation-form-label"><?php 
+    echo __( 'What is', WPSD_TXT_DOMAIN ) . '&nbsp;' . esc_html( $wpsdCaptchaItem1 ) . '&nbsp;+&nbsp;' . esc_html( $wpsdCaptchaItem2 );
+    ?>&nbsp;?</label>
+                <input type="hidden" value="<?php 
+    printf( '%d', $wpsdCaptchaItem1 + $wpsdCaptchaItem2 );
+    ?>" name="wpsd_captcha_content_check" id="wpsd_captcha_content_check">
+                <input type="number" min="2" max="40" name="wpsd_captcha_content" id="wpsd_captcha_content" class="wpsd-text-field">
+                <?php 
+}
 ?>
             <div id="card-errors" class="wpsd-alert" role="alert"></div>
             <input type="submit" name="wpsd-donate-button" class="wpsd-donate-button" value="<?php 

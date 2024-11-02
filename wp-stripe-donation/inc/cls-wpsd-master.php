@@ -12,6 +12,7 @@ require_once WPSD_PATH . 'common/form-content.php';
 require_once WPSD_PATH . 'common/form-styles.php';
 require_once WPSD_PATH . 'common/donations.php';
 require_once WPSD_PATH . 'common/fundraising-content.php';
+require_once WPSD_PATH . 'common/fundraising-styles.php';
 /**
  * Master Class: Plugin
  */

@@ -241,7 +241,7 @@ echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professi
 ?>
             </td>
         </tr>
-        <tr>
+        <tr class="wpsd_address_state_label">
             <th scope="row">
                 <label for="wpsd_show_captcha"><?php 
 _e( 'Address State Label', WPSD_TXT_DOMAIN );
@@ -289,7 +289,7 @@ echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professi
 ?>
             </td>
         </tr>
-        <tr>
+        <tr class="wpsd_show_comments">
             <th scope="row">
                 <label for="wpsd_show_comments"><?php 
 _e( 'Show Comments', WPSD_TXT_DOMAIN );
@@ -319,20 +319,16 @@ echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professi
 ?>
             </td>
         </tr>
-        <tr>
+        <tr class="wpsd_show_captcha">
             <th scope="row">
                 <label for="wpsd_show_captcha"><?php 
 _e( 'Show Captcha', WPSD_TXT_DOMAIN );
 ?></label>
             </th>
             <td>
-                <?php 
-?>
-                    <span><?php 
-echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
-?></span>
-                    <?php 
-?>
+                 <input type="checkbox" name="wpsd_show_captcha" id="wpsd_show_captcha" value="1" <?php 
+echo ( $wpsd_show_captcha ? 'checked' : '' );
+?>>
             </td>
             <th scope="row" style="text-align: right;">
                 <label><?php 
@@ -340,13 +336,11 @@ _e( 'Captcha Label', WPSD_TXT_DOMAIN );
 ?></label>
             </th>
             <td>
-                <?php 
-?>
-                    <span><?php 
-echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
-?></span>
-                    <?php 
-?>
+                <input type="text" name="wpsd_captcha_label" class="medium-text" placeholder="<?php 
+esc_attr_e( $wpsd_captcha_label );
+?>" value="<?php 
+esc_attr_e( $wpsd_captcha_label );
+?>">
             </td>
         </tr>
         <tr>

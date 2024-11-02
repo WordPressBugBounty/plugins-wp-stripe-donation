@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-03 03:12+0600\n"
+"POT-Creation-Date: 2024-11-02 13:19+0600\n"
 "PO-Revision-Date: 2021-07-11 01:00+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,116 +17,116 @@ msgstr ""
 "X-Poedit-SearchPath-0: admin\n"
 "X-Poedit-SearchPath-1: front\n"
 
-#: admin/cls-wpsd-admin.php:81 admin/cls-wpsd-admin.php:82
+#: admin/cls-wpsd-admin.php:92 admin/cls-wpsd-admin.php:93
 msgid "WP Stripe Donation"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:92 admin/cls-wpsd-admin.php:93
+#: admin/cls-wpsd-admin.php:103 admin/cls-wpsd-admin.php:104
 msgid "Key Settings"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:101 admin/cls-wpsd-admin.php:102
+#: admin/cls-wpsd-admin.php:112 admin/cls-wpsd-admin.php:113
 #: admin/view/general.php:16
 msgid "General Settings"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:110 admin/cls-wpsd-admin.php:111
+#: admin/cls-wpsd-admin.php:121 admin/cls-wpsd-admin.php:122
 #: admin/view/form.php:23
 msgid "Form Settings"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:119 admin/cls-wpsd-admin.php:120
-#: admin/cls-wpsd-admin.php:367
+#: admin/cls-wpsd-admin.php:130 admin/cls-wpsd-admin.php:131
+#: admin/cls-wpsd-admin.php:372
 msgid "Fundraising"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:128 admin/cls-wpsd-admin.php:129
+#: admin/cls-wpsd-admin.php:139 admin/cls-wpsd-admin.php:140
 msgid "Google reCaptcha"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:137 admin/cls-wpsd-admin.php:138
+#: admin/cls-wpsd-admin.php:148 admin/cls-wpsd-admin.php:149
 msgid "Donation List"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:146 admin/cls-wpsd-admin.php:147
+#: admin/cls-wpsd-admin.php:157 admin/cls-wpsd-admin.php:158
 msgid "Receipt Email"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:155 admin/cls-wpsd-admin.php:156
+#: admin/cls-wpsd-admin.php:166 admin/cls-wpsd-admin.php:167
 msgid "Usage & Tutorial"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:323 admin/cls-wpsd-admin.php:342
-#: admin/cls-wpsd-admin.php:355 front/view/donors.php:10
+#: admin/cls-wpsd-admin.php:328 admin/cls-wpsd-admin.php:347
+#: admin/cls-wpsd-admin.php:360 front/view/donors.php:10
 msgid "Amount"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:324 admin/cls-wpsd-admin.php:343
-#: admin/cls-wpsd-admin.php:356 front/view/donors.php:11
+#: admin/cls-wpsd-admin.php:329 admin/cls-wpsd-admin.php:348
+#: admin/cls-wpsd-admin.php:361 front/view/donors.php:11
 msgid "Donation For"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:325 admin/cls-wpsd-admin.php:344
-#: admin/cls-wpsd-admin.php:357
+#: admin/cls-wpsd-admin.php:330 admin/cls-wpsd-admin.php:349
+#: admin/cls-wpsd-admin.php:362
 msgid "Name"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:326 admin/cls-wpsd-admin.php:345
-#: admin/cls-wpsd-admin.php:358
+#: admin/cls-wpsd-admin.php:331 admin/cls-wpsd-admin.php:350
+#: admin/cls-wpsd-admin.php:363
 msgid "Email"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:327 admin/cls-wpsd-admin.php:346
-#: admin/cls-wpsd-admin.php:359 front/view/donors.php:13
+#: admin/cls-wpsd-admin.php:332 admin/cls-wpsd-admin.php:351
+#: admin/cls-wpsd-admin.php:364 front/view/donors.php:13
 msgid "Date"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:341 admin/cls-wpsd-admin.php:354
+#: admin/cls-wpsd-admin.php:346 admin/cls-wpsd-admin.php:359
 msgid "Select All"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:347 admin/cls-wpsd-admin.php:360
+#: admin/cls-wpsd-admin.php:352 admin/cls-wpsd-admin.php:365
 #: front/view/donors.php:14
 msgid "Comments"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:348 admin/cls-wpsd-admin.php:370
+#: admin/cls-wpsd-admin.php:353 admin/cls-wpsd-admin.php:375
 msgid "Action"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:361
+#: admin/cls-wpsd-admin.php:366
 msgid "Address"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:362
+#: admin/cls-wpsd-admin.php:367
 msgid "City"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:363
+#: admin/cls-wpsd-admin.php:368
 msgid "State"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:364
+#: admin/cls-wpsd-admin.php:369
 msgid "Postcode"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:365
+#: admin/cls-wpsd-admin.php:370
 msgid "Country"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:366
+#: admin/cls-wpsd-admin.php:371
 msgid "Condition One"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:368
+#: admin/cls-wpsd-admin.php:373
 msgid "Fundraising Start Date"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:369
+#: admin/cls-wpsd-admin.php:374
 msgid "Fundraising End Date"
 msgstr ""
 
-#: admin/cls-wpsd-admin.php:457 admin/cls-wpsd-admin.php:464
+#: admin/cls-wpsd-admin.php:462 admin/cls-wpsd-admin.php:469
 msgid "\n"
 msgstr ""
 
@@ -200,7 +200,6 @@ msgid "Disable Admin Email Notification"
 msgstr ""
 
 #: admin/view/general.php:51 admin/view/partial/form-content.php:81
-#: admin/view/partial/fundraising-content.php:24
 #: admin/view/partial/receipt-email-content.php:81
 #: admin/view/partial/receipt-email-content.php:103
 #: admin/view/partial/receipt-email-content.php:125
@@ -257,14 +256,12 @@ msgstr ""
 #: admin/view/partial/form-content.php:250
 #: admin/view/partial/form-content.php:271
 #: admin/view/partial/form-content.php:289
-#: admin/view/partial/form-content.php:310
-#: admin/view/partial/form-content.php:328
-#: admin/view/partial/form-content.php:376
-#: admin/view/partial/form-content.php:400
-#: admin/view/partial/form-content.php:424
-#: admin/view/partial/form-content.php:450
-#: admin/view/partial/form-content.php:472
-#: admin/view/partial/form-content.php:490
+#: admin/view/partial/form-content.php:351
+#: admin/view/partial/form-content.php:375
+#: admin/view/partial/form-content.php:399
+#: admin/view/partial/form-content.php:425
+#: admin/view/partial/form-content.php:447
+#: admin/view/partial/form-content.php:465
 #: admin/view/partial/form-styles.php:33 admin/view/partial/form-styles.php:52
 #: admin/view/partial/form-styles.php:71 admin/view/partial/form-styles.php:92
 #: admin/view/partial/form-styles.php:120
@@ -282,7 +279,8 @@ msgstr ""
 #: admin/view/partial/form-styles.php:375
 #: admin/view/partial/form-styles.php:394
 #: admin/view/partial/form-template.php:35
-#: admin/view/partial/fundraising-content.php:44
+#: admin/view/partial/fundraising-content.php:17
+#: admin/view/partial/fundraising-styles.php:19 admin/view/recaptcha.php:49
 msgid "Upgrade to Professional!"
 msgstr ""
 
@@ -310,16 +308,17 @@ msgstr ""
 msgid "Publishable Key"
 msgstr ""
 
-#: admin/view/key-settings.php:57 admin/view/recaptcha.php:67
+#: admin/view/key-settings.php:57 admin/view/recaptcha.php:76
 msgid "Secret Key"
 msgstr ""
 
-#: admin/view/key-settings.php:69 admin/view/partial/form-content.php:507
+#: admin/view/key-settings.php:69 admin/view/partial/form-content.php:482
 #: admin/view/partial/form-styles.php:411
 #: admin/view/partial/form-template.php:53
-#: admin/view/partial/fundraising-content.php:102
+#: admin/view/partial/fundraising-content.php:88
+#: admin/view/partial/fundraising-styles.php:96
 #: admin/view/partial/receipt-email-content.php:166
-#: admin/view/partial/receipt-email-template.php:58 admin/view/recaptcha.php:77
+#: admin/view/partial/receipt-email-template.php:58 admin/view/recaptcha.php:86
 msgid "Save Settings"
 msgstr ""
 
@@ -403,67 +402,67 @@ msgstr ""
 msgid "Show Captcha"
 msgstr ""
 
-#: admin/view/partial/form-content.php:322
+#: admin/view/partial/form-content.php:310
 msgid "Captcha Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:343
+#: admin/view/partial/form-content.php:318
 msgid "Amount Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:352
+#: admin/view/partial/form-content.php:327
 msgid "Other Amount Text"
 msgstr ""
 
-#: admin/view/partial/form-content.php:361
+#: admin/view/partial/form-content.php:336
 msgid "Card Element Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:370
+#: admin/view/partial/form-content.php:345
 msgid "Form Width"
 msgstr ""
 
-#: admin/view/partial/form-content.php:394
+#: admin/view/partial/form-content.php:369
 msgid "Form Header Type"
 msgstr ""
 
-#: admin/view/partial/form-content.php:407
+#: admin/view/partial/form-content.php:382
 msgid "tdb"
 msgstr ""
 
-#: admin/view/partial/form-content.php:407
+#: admin/view/partial/form-content.php:382
 msgid "Title-Description-Banner"
 msgstr ""
 
-#: admin/view/partial/form-content.php:408
+#: admin/view/partial/form-content.php:383
 msgid "btd"
 msgstr ""
 
-#: admin/view/partial/form-content.php:408
+#: admin/view/partial/form-content.php:383
 msgid "Banner-Title-Description"
 msgstr ""
 
-#: admin/view/partial/form-content.php:409
+#: admin/view/partial/form-content.php:384
 msgid "tbd"
 msgstr ""
 
-#: admin/view/partial/form-content.php:409
+#: admin/view/partial/form-content.php:384
 msgid "Title-Banner-Description"
 msgstr ""
 
-#: admin/view/partial/form-content.php:418
+#: admin/view/partial/form-content.php:393
 msgid "Form Button Width"
 msgstr ""
 
-#: admin/view/partial/form-content.php:442
+#: admin/view/partial/form-content.php:417
 msgid "Display Total Donation Today"
 msgstr ""
 
-#: admin/view/partial/form-content.php:464
+#: admin/view/partial/form-content.php:439
 msgid "Display Condition 1"
 msgstr ""
 
-#: admin/view/partial/form-content.php:484
+#: admin/view/partial/form-content.php:459
 msgid "Condition 1 Text"
 msgstr ""
 
@@ -562,25 +561,64 @@ msgstr ""
 msgid "Modern"
 msgstr ""
 
-#: admin/view/partial/fundraising-content.php:18
+#: admin/view/partial/fundraising-content.php:28
 msgid "Enable Fundraising"
 msgstr ""
 
-#: admin/view/partial/fundraising-content.php:38
+#: admin/view/partial/fundraising-content.php:36
 msgid "Target Amount"
 msgstr ""
 
-#: admin/view/partial/fundraising-content.php:58
+#: admin/view/partial/fundraising-content.php:44
 msgid "Start Date"
 msgstr ""
 
-#: admin/view/partial/fundraising-content.php:64
-#: admin/view/partial/fundraising-content.php:85
-msgid "Please Upgrade Now"
+#: admin/view/partial/fundraising-content.php:53
+msgid "End Date"
 msgstr ""
 
-#: admin/view/partial/fundraising-content.php:79
-msgid "End Date"
+#: admin/view/partial/fundraising-content.php:62
+msgid "Goal/Target Label Text"
+msgstr ""
+
+#: admin/view/partial/fundraising-content.php:70
+msgid "Raised Label Text"
+msgstr ""
+
+#: admin/view/partial/fundraising-content.php:78
+msgid "Total Donations Label Text"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:30
+msgid "Progress Bar Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:37
+msgid "Progress Background Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:46
+msgid "Goal Label Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:53
+msgid "Goal Volume Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:62
+msgid "Raised Label Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:69
+msgid "Raised Volume Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:78
+msgid "Donations Label Color"
+msgstr ""
+
+#: admin/view/partial/fundraising-styles.php:85
+msgid "Donations Number Color"
 msgstr ""
 
 #: admin/view/partial/receipt-email-content.php:20
@@ -663,11 +701,11 @@ msgstr ""
 msgid "Google reCaptcha Settings"
 msgstr ""
 
-#: admin/view/recaptcha.php:51
+#: admin/view/recaptcha.php:60
 msgid "Enable reCaptcha"
 msgstr ""
 
-#: admin/view/recaptcha.php:59
+#: admin/view/recaptcha.php:68
 msgid "Site Key"
 msgstr ""
 
@@ -711,26 +749,26 @@ msgstr ""
 msgid "Processing"
 msgstr ""
 
-#: front/view/template/classic.php:74 front/view/template/modern.php:50
+#: front/view/template/classic.php:74
 msgid "Raised"
 msgstr ""
 
-#: front/view/template/classic.php:75 front/view/template/modern.php:51
+#: front/view/template/classic.php:75
 msgid "Donations"
 msgstr ""
 
-#: front/view/template/classic.php:76 front/view/template/modern.php:52
+#: front/view/template/classic.php:76
 msgid "Goal"
 msgstr ""
 
-#: front/view/template/classic.php:305 front/view/template/modern.php:286
+#: front/view/template/classic.php:304 front/view/template/modern.php:286
 msgid "What is"
 msgstr ""
 
-#: front/view/template/classic.php:339
+#: front/view/template/classic.php:340
 msgid "Total"
 msgstr ""
 
-#: front/view/template/classic.php:339
+#: front/view/template/classic.php:340
 msgid "Donation Today"
 msgstr ""

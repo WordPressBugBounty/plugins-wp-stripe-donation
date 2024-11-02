@@ -1,7 +1,8 @@
 table.wpsd-form-content-settings,
 table.wpsd-form-style-settings,
 table.wpsd-email-temp-form-table,
-table.wpsd-form-template-settings-table {
+table.wpsd-form-template-settings-table,
+table.wpsd-fund-raising-style-settings {
     width: 100%;
 }
 
@@ -14,7 +15,9 @@ table.wpsd-form-content-settings tr td,
 table.wpsd-general-settings tr th,
 table.wpsd-general-settings tr td,
 table.wpsd-form-template-settings-table tr th,
-table.wpsd-form-template-settings-table tr td {
+table.wpsd-form-template-settings-table tr td,
+table.wpsd-fund-raising-style-settings tr th,
+table.wpsd-fund-raising-style-settings tr td {
     border: 0px solid #000;
     padding: 10px 10px;
     text-align: left;
@@ -32,7 +35,8 @@ table.wpsd-email-temp-form-table tbody tr td label {
 
 table.wpsd-email-temp-form-table tbody tr th,
 table.wpsd-form-content-settings tr th,
-table.wpsd-form-template-settings-table tr th {
+table.wpsd-form-template-settings-table tr th,
+table.wpsd-fund-raising-style-settings tr th {
     max-width: 150px;
     width: 150px;
     text-align: left;
@@ -46,7 +50,8 @@ table.wpsd-form-style-settings tr th {
 table.wpsd-email-temp-form-table tr th label,
 table.wpsd-form-style-settings tr th label,
 table.wpsd-form-content-settings tr th label,
-table.wpsd-form-template-settings-table tr th label {
+table.wpsd-form-template-settings-table tr th label,
+table.wpsd-fund-raising-style-settings tr th label {
     font-weight: 600;
     text-align: left;
 }

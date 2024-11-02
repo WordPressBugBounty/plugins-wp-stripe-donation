@@ -16,7 +16,8 @@ class Wpsd_Admin {
         Wpsd_Form_Settings,
         Wpsd_Form_Style_Settings,
         Wpsd_Donations,
-        Wpsd_Fundraising_Content_Settings
+        Wpsd_Fundraising_Content_Settings,
+        Wpsd_Fundraising_Styles_Settings
     ;
     private $wpsd_version;
 
@@ -34,6 +35,9 @@ class Wpsd_Admin {
      *	Loading admin panel assets
      */
     function wpsd_admin_assets() {
+        // You need styling for the datepicker. For simplicity I've linked to Google's hosted jQuery UI CSS.
+        wp_register_style( 'jquery-ui', '//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css' );
+        wp_enqueue_style( 'jquery-ui' );
         wp_enqueue_style(
             $this->wpsd_assets_prefix . 'font-awesome',
             WPSD_ASSETS . 'css/fontawesome/css/all.min.css',
@@ -53,6 +57,11 @@ class Wpsd_Admin {
         wp_enqueue_media();
         if ( !wp_script_is( 'jquery' ) ) {
             wp_enqueue_script( 'jquery' );
+        }
+        // Load the datepicker script (pre-registered in WordPress).
+        wp_enqueue_script( 'jquery-ui-datepicker' );
+        if ( !did_action( 'wp_enqueue_media' ) ) {
+            wp_enqueue_media();
         }
         wp_register_script(
             'wsd-table-to-excel',
@@ -220,20 +229,14 @@ class Wpsd_Admin {
                 $wpsdNotice = $this->wpsd_set_fundraising_content_settings( $_POST );
             }
         }
-        $wpsdContentSettings = $this->wpsd_get_fundraising_content_settings();
-        /*
-        if ( isset( $_POST['updateStyle'] ) ) {
-        	if ( ! isset( $_POST['wpsd_template_style_nonce_field'] ) 
-        		|| ! wp_verify_nonce( $_POST['wpsd_template_style_nonce_field'], 'wpsd_template_style_action' ) ) {
-        		print 'Sorry, your nonce did not verify.';
-        		exit;
-        	} else {
-        		$wpsdNotice = $this->wpsd_set_form_style_settings( $_POST );
-        	}
+        if ( isset( $_POST['updateFundRaisingStyles'] ) ) {
+            if ( !isset( $_POST['wpsd_fund_raising_style_nonce_field'] ) || !wp_verify_nonce( $_POST['wpsd_fund_raising_style_nonce_field'], 'wpsd_fund_raising_style_action' ) ) {
+                print 'Sorry, your nonce did not verify.';
+                exit;
+            } else {
+                $wpsdNotice = $this->wpsd_set_fund_raising_style_settings( $_POST );
+            }
         }
-        
-        $wpsdSyleSettings 		= $this->wpsd_get_form_style_settings();
-        */
         require_once WPSD_PATH . 'admin/view/fundraising.php';
     }
 

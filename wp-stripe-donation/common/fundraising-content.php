@@ -53,6 +53,21 @@ trait Wpsd_Fundraising_Content_Settings
                 'type'      => 'text',
                 'default'   => '',
             ],
+            [
+                'name'      => 'wpsd_fundraising_goal_lbl_txt',
+                'type'      => 'text',
+                'default'   => 'Goal',
+            ],
+            [
+                'name'      => 'wpsd_fundraising_raised_lbl_txt',
+                'type'      => 'text',
+                'default'   => 'Raised',
+            ],
+            [
+                'name'      => 'wpsd_fundraising_donation_lbl_txt',
+                'type'      => 'text',
+                'default'   => 'Donations',
+            ],
         ];
     }
 }

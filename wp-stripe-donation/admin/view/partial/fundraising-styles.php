@@ -1,6 +1,17 @@
 <?php
+
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
+$wpsdFundRaisingStylesSettings = $this->wpsd_get_fund_raising_style_settings();
+//print_r( $wpsdFundRaisingStylesSettings );
+foreach ( $wpsdFundRaisingStylesSettings as $option_name => $option_value ) {
+    if ( isset( $wpsdFundRaisingStylesSettings[$option_name] ) ) {
+        ${"" . $option_name} = $option_value;
+    }
+}
 ?>
-Will be added soon.
+    <span><?php 
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professional!', WPSD_TXT_DOMAIN ) . '</a>';
+?></span>
+    

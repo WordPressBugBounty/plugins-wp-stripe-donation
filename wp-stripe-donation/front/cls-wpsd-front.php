@@ -17,7 +17,8 @@ class Wpsd_Front {
         Wpsd_Email_Settings,
         Wpsd_Donations,
         Wpsd_Receipt_Email_Temp,
-        Wpsd_Fundraising_Content_Settings
+        Wpsd_Fundraising_Content_Settings,
+        Wpsd_Fundraising_Styles_Settings
     ;
     private $wpsd_version;
 

@@ -5,6 +5,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 $wpsdGeneralSettings = $this->wpsd_get_general_settings();
 $wpsdFundraisingContentSettings = $this->wpsd_get_fundraising_content_settings();
+$wpsdFundRaisingStylesSettings = $this->wpsd_get_fund_raising_style_settings();
 $wpsdFormSettings = $this->wpsd_get_form_content_settings();
 $wpsdFormSyleSettings = $this->wpsd_get_form_style_settings();
 $wpsd_donation_today = $this->wpsd_get_total_donation_today();
@@ -18,6 +19,12 @@ foreach ( $wpsdGeneralSettings as $gs_name => $gs_value ) {
 foreach ( $wpsdFundraisingContentSettings as $fr_name => $fr_value ) {
     if ( isset( $wpsdFundraisingContentSettings[$fr_name] ) ) {
         ${"" . $fr_name} = $fr_value;
+    }
+}
+// Fundraising Style Settings
+foreach ( $wpsdFundRaisingStylesSettings as $frs_option_name => $frs_option_value ) {
+    if ( isset( $wpsdFundRaisingStylesSettings[$frs_option_name] ) ) {
+        ${"" . $frs_option_name} = $frs_option_value;
     }
 }
 // Form Settings
