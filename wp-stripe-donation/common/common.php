@@ -1,17 +1,17 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 /**
  *	Trait: Common
  */
-trait Wpsd_Common 
+trait Wpsd_Common
 {
-	protected $data;
+    protected $data;
 
-	protected function wpsd_admin_sidebar() {
-		?>
+    protected function wpsd_admin_sidebar() {
+        ?>
 		<div class="wpsd-admin-sidebar" style="width: 20%; float: left;">
 			<div class="postbox pro-features">
 				<h3 class="hndle"><span>Pro Features</span></h3>
@@ -33,7 +33,11 @@ trait Wpsd_Common
 						<li>&#10003; Apply a Condition to the Donors</li>
 						<li>&#10003; Multi Panel Donation Form For Better View</li>
 					</ul>
-					<p style="margin-bottom: 1px! important;"><a href="https://aidwp.com/" target="_blank" class="button button-primary wpsd-button" style="background: #F5653E;">Upgrade Now!</a></p>
+					<?php 
+        ?>
+						<p style="margin-bottom: 1px! important;"><a href="https://aidwp.com/" target="_blank" class="button button-primary wpsd-button" style="background: #F5653E;">Upgrade Now!</a></p>
+						<?php 
+        ?>
 				</div>
 			</div>
 			<div class="postbox">
@@ -56,67 +60,47 @@ trait Wpsd_Common
 				</div>
 			</div>
 		</div> 
-		<?php
-	}
+		<?php 
+    }
 
-	protected function wpsd_build_set_settings_options( $fields, $post ) {
-
-		$this->data = [];
-
-		$i=0;
+    protected function wpsd_build_set_settings_options( $fields, $post ) {
+        $this->data = [];
+        $i = 0;
         foreach ( $fields as $field => $value ) {
-
             if ( 'string' === $fields[$i]['type'] ) {
-
-                $this->data[$fields[$i]['name']] = isset( $post[$fields[$i]['name']] ) && filter_var( $post[$fields[$i]['name']], FILTER_SANITIZE_STRING ) ? $post[$fields[$i]['name']] : $fields[$i]['default'];
-
+                $this->data[$fields[$i]['name']] = ( isset( $post[$fields[$i]['name']] ) && filter_var( $post[$fields[$i]['name']], FILTER_SANITIZE_STRING ) ? $post[$fields[$i]['name']] : $fields[$i]['default'] );
             }
             if ( 'number' === $fields[$i]['type'] ) {
-
-                $this->data[$fields[$i]['name']] = isset( $post[$fields[$i]['name']] ) && filter_var( $post[$fields[$i]['name']], FILTER_SANITIZE_NUMBER_INT ) ? $post[$fields[$i]['name']] : $fields[$i]['default'];
-
+                $this->data[$fields[$i]['name']] = ( isset( $post[$fields[$i]['name']] ) && filter_var( $post[$fields[$i]['name']], FILTER_SANITIZE_NUMBER_INT ) ? $post[$fields[$i]['name']] : $fields[$i]['default'] );
             }
             if ( 'boolean' === $fields[$i]['type'] ) {
-
-                $this->data[$fields[$i]['name']] = isset( $post[$fields[$i]['name']] ) ? $post[$fields[$i]['name']] : $fields[$i]['default'];
-
+                $this->data[$fields[$i]['name']] = ( isset( $post[$fields[$i]['name']] ) ? $post[$fields[$i]['name']] : $fields[$i]['default'] );
             }
             if ( 'text' === $this->fields[$i]['type'] ) {
-
-                $this->data[$this->fields[$i]['name']] = isset( $post[$this->fields[$i]['name']] ) ? sanitize_text_field( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'];
-
+                $this->data[$this->fields[$i]['name']] = ( isset( $post[$this->fields[$i]['name']] ) ? sanitize_text_field( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'] );
             }
             if ( 'textarea' === $this->fields[$i]['type'] ) {
-
-                $this->data[$this->fields[$i]['name']] = isset( $post[$this->fields[$i]['name']] ) ? sanitize_textarea_field( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'];
-
+                $this->data[$this->fields[$i]['name']] = ( isset( $post[$this->fields[$i]['name']] ) ? sanitize_textarea_field( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'] );
             }
-			if ( 'editor' === $this->fields[$i]['type'] ) {
-	
-				$this->data[$this->fields[$i]['name']] = isset( $post[$this->fields[$i]['name']] ) ? wp_kses_post( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'];
-	
-			}
+            if ( 'editor' === $this->fields[$i]['type'] ) {
+                $this->data[$this->fields[$i]['name']] = ( isset( $post[$this->fields[$i]['name']] ) ? wp_kses_post( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'] );
+            }
             if ( 'email' === $this->fields[$i]['type'] ) {
-
-                $this->data[$this->fields[$i]['name']] = isset( $post[$this->fields[$i]['name']] ) ? sanitize_email( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'];
-
+                $this->data[$this->fields[$i]['name']] = ( isset( $post[$this->fields[$i]['name']] ) ? sanitize_email( $post[$this->fields[$i]['name']] ) : $this->fields[$i]['default'] );
             }
             $i++;
         }
+        return $this->data;
+    }
 
-		return $this->data;
-	}
-
-	protected function wpsd_build_get_settings_options( $fields, $settings ) {
-		
-		$this->data = [];
-        $i=0;
-
+    protected function wpsd_build_get_settings_options( $fields, $settings ) {
+        $this->data = [];
+        $i = 0;
         foreach ( $fields as $option => $value ) {
-            $this->data[$fields[$i]['name']]  = isset( $settings[$fields[$i]['name']] ) ? $settings[$fields[$i]['name']] : $fields[$i]['default'];
+            $this->data[$fields[$i]['name']] = ( isset( $settings[$fields[$i]['name']] ) ? $settings[$fields[$i]['name']] : $fields[$i]['default'] );
             $i++;
         }
+        return $this->data;
+    }
 
-		return $this->data;
-	}
 }

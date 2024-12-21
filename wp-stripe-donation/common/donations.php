@@ -13,14 +13,20 @@ trait Wpsd_Donations
 
 		global $wpdb;
 		return $wpdb->get_results($wpdb->prepare("SELECT * FROM $this->wpsdTable WHERE %d ORDER BY wpsd_id DESC LIMIT 0, 10", 1));
-        
 	}
 
-	protected function wpsd_get_all_donations_full() {
+	protected function wpsd_get_all_donations_full( $limit = null ) {
 
 		global $wpdb;
-		return $wpdb->get_results($wpdb->prepare("SELECT * FROM $this->wpsdTable WHERE %d ORDER BY wpsd_id DESC", 1));
-        
+
+		$wQuery = '';
+
+		if ( null != $limit ) {
+
+			$wQuery .= "LIMIT 0, {$limit}"; 
+		}
+
+		return $wpdb->get_results($wpdb->prepare("SELECT * FROM $this->wpsdTable WHERE %d ORDER BY wpsd_id DESC {$wQuery}", 1));
 	}
 
 	protected function wpsd_delete_donation( $id ) {

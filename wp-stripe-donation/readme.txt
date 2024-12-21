@@ -3,8 +3,8 @@ Contributors: mhmrajib, hmplugin, freemius
 Donate link: https://www.paypal.me/mhmrajib
 Tags: charity, donations, stripe, payments, stripe donation
 Requires at least: 5.4
-Tested up to: 6.6.2
-Stable tag: 3.2.5
+Tested up to: 6.7.1
+Stable tag: 3.2.6
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -246,6 +246,12 @@ Put your items like “Item One,Item Two,Item Three” and you will see them in 
 
 
 == Changelog ==
+
+= 3.2.6 =
+* Language file Loading action hook fixed
+* Exclude security token option added
+* Code optimized
+* Minor bug fixed
 
 = 3.2.5 =
 * Freemius SDK update to 2.9.0

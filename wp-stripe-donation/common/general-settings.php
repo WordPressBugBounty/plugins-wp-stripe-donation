@@ -92,6 +92,11 @@ trait Wpsd_General_Settings
                 'type'      => 'number',
                 'default'   => 1,
             ],
+            [
+                'name'      => 'wpsd_exclude_security_token',
+                'type'      => 'boolean',
+                'default'   => false,
+            ],
         ];
     }
 }

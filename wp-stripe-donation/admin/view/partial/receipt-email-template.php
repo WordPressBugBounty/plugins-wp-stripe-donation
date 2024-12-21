@@ -52,7 +52,29 @@ _e( 'HTML', WPSD_TXT_DOMAIN );
 ?>
                         <br>
                         <span><?php 
-echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'For HTML Template Upgrade to Professional', WPSD_TXT_DOMAIN ) . '</a>';
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Available in Professional', WPSD_TXT_DOMAIN ) . '</a>';
+?></span>
+                        <?php 
+?>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">&nbsp;</th>
+                <td>
+                    <?php 
+?>
+                    <label for="wpsd_email_temp_layout_custom">
+                        <img src="<?php 
+echo esc_url( WPSD_ASSETS . 'img/receipt-temp/custom.webp' );
+?>" alt="<?php 
+_e( 'Customized', WPSD_TXT_DOMAIN );
+?>" width="400px">
+                    </label>
+                    <?php 
+?>
+                        <br>
+                        <span><?php 
+echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Available in Professional', WPSD_TXT_DOMAIN ) . '</a>';
 ?></span>
                         <?php 
 ?>

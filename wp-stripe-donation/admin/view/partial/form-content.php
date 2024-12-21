@@ -49,6 +49,7 @@ for ($i = 0; $i < 5; $i++) {
                 </div>
             </td>
         </tr>
+        <!-- Display Banner -->
         <tr>
             <th scope="row">
                 <label for="wpsd_display_banner"><?php 

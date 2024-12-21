@@ -2,6 +2,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$limit   = isset( $attr['limit'] ) ? $attr['limit'] : null;
+
+$wpsdDonations = $this->wpsd_get_all_donations_full( $limit );
 ?>
 <table class="wp-list-table widefat fixed striped table-view-list posts" cellspacing="0" id="wpc_data_table">
     <thead>

@@ -83,6 +83,7 @@ esc_attr_e( $wpsd_payment_title );
 ?>" />
                         </td>
                     </tr>
+                    <!-- Description -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -102,6 +103,7 @@ wp_editor( wp_kses_post( $wpsd_form_description ), 'wpsd_form_description', arra
 ?>
                         </td>
                     </tr>
+                    <!-- 'Donation For Options -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -123,6 +125,7 @@ _e( 'Use comma "," separated values like: Option-1, Option-2', WPSD_TXT_DOMAIN )
 ?></code>
                         </td>
                     </tr>
+                    <!-- Amounts -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -154,6 +157,7 @@ esc_attr_e( $wpsd_minimum_amount );
 ?>">
                         </td>
                     </tr>
+                    <!-- Submit Button Text -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -171,6 +175,7 @@ esc_attr_e( $wpsd_donate_button_text );
 ?>" />
                         </td>
                     </tr>
+                    <!-- Currency -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -208,6 +213,7 @@ foreach ( $wpsdCurrency as $wpsdcurr ) {
                             </select>
                         </td>
                     </tr>
+                    <!-- Redirect Thank You Page -->
                     <tr>
                         <th scope="row">
                             <label><?php 
@@ -224,6 +230,7 @@ echo '<a href="' . wsd_fs()->get_upgrade_url() . '">' . __( 'Upgrade to Professi
 ?>
                         </td>
                     </tr>
+                    <!-- Exclude Stripe SDK -->
                     <tr>
                         <th scope="row">
                             <label for="wpsd_exclude_stripe_sdk"><?php 
@@ -237,6 +244,23 @@ echo ( $wpsd_exclude_stripe_sdk ? 'checked' : '' );
 ?>>
                             <code><?php 
 _e( 'Check this if your form keeps loading!', WPSD_TXT_DOMAIN );
+?></code>
+                        </td>
+                    </tr>
+                    <!-- Exclude Security Token -->
+                    <tr>
+                        <th scope="row">
+                            <label for="wpsd_exclude_security_token"><?php 
+_e( 'Exclude Security Token', WPSD_TXT_DOMAIN );
+?></label>
+                        </th>
+                        <td colspan="3">
+                            <input type="checkbox" name="wpsd_exclude_security_token" class="wpsd_exclude_security_token" id="wpsd_exclude_security_token" value="1" 
+                                <?php 
+checked( $wpsd_exclude_security_token, 1 );
+?>>
+                            <code><?php 
+_e( 'Enable this if you face invalid security token error', WPSD_TXT_DOMAIN );
 ?></code>
                         </td>
                     </tr>

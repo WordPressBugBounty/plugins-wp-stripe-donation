@@ -28,8 +28,6 @@ class Wpsd_Front {
     }
 
     function wpsd_front_assets() {
-        // searchable dropdown select Style
-        //wp_register_style('wbg-selectize', '//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css');
         wp_enqueue_style(
             'wpsd-selectize',
             WPSD_ASSETS . 'css/selectize.bootstrap3.min.css',
@@ -37,7 +35,6 @@ class Wpsd_Front {
             $this->wpsd_version,
             FALSE
         );
-        //wp_enqueue_style('wbg-selectize');
         wp_enqueue_style(
             $this->wpsd_assets_prefix . 'front',
             WPSD_ASSETS . 'css/' . $this->wpsd_assets_prefix . 'front.css',
@@ -48,20 +45,6 @@ class Wpsd_Front {
         if ( !wp_script_is( 'jquery' ) ) {
             wp_enqueue_script( 'jquery' );
         }
-        /*
-        wp_enqueue_script(
-        	'wpsd-stripe', 
-        	'//js.stripe.com/v3/',
-        	null, 
-        	$this->wpsd_version, 
-        	true
-        );
-        
-        
-        if ( wsd_fs()->is_plan__premium_only('pro') ) {
-        	wp_enqueue_script( 'wpsd-recaptcha-script', 'https://www.google.com/recaptcha/api.js' );
-        }
-        */
         wp_enqueue_script(
             $this->wpsd_assets_prefix . 'front',
             WPSD_ASSETS . 'js/' . $this->wpsd_assets_prefix . 'front.js',
@@ -69,7 +52,6 @@ class Wpsd_Front {
             $this->wpsd_version,
             TRUE
         );
-        // searchable dropdown select js
         wp_enqueue_script(
             'wbg-selectize',
             WPSD_ASSETS . 'js/selectize.min.js',
@@ -112,8 +94,7 @@ class Wpsd_Front {
         return $output;
     }
 
-    function wpsd_load_donors_panel() {
-        $wpsdDonations = $this->wpsd_get_all_donations_full();
+    function wpsd_load_donors_panel( $attr ) {
         $output = '';
         ob_start();
         include plugin_dir_path( __FILE__ ) . '/view/donors.php';
@@ -122,9 +103,11 @@ class Wpsd_Front {
     }
 
     function wpsd_donation_handler() {
-        if ( !check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
-            wp_send_json_error( 'Invalid security token sent.' );
-            wp_die();
+        if ( !$wpsd_exclude_security_token ) {
+            if ( !check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+                wp_send_json_error( 'Invalid security token sent.' );
+                wp_die();
+            }
         }
         if ( !empty( $_POST['email'] ) && !empty( $_POST['amount'] ) && !empty( $_POST['donation_for'] ) ) {
             $wpsdDonationFor = sanitize_text_field( $_POST['donation_for'] );
@@ -132,7 +115,7 @@ class Wpsd_Front {
             $wpsdEmail = sanitize_email( $_POST['email'] );
             $wpsdAmount = sanitize_text_field( $_POST['amount'] );
             $wpsdCurrency = sanitize_text_field( $_POST['currency'] );
-            $idempotency = ( $wpsd_hide_idempotency_key ? $this->wpsd_rand_string() : preg_replace( '/[^a-z\\d]/im', '', $_POST['idempotency'] ) );
+            //$idempotency 		= $wpsd_hide_idempotency_key ? $this->wpsd_rand_string() : preg_replace('/[^a-z\d]/im', '', $_POST['idempotency']);
             $stripe_sdk = ( isset( $_POST['stripeSdk'] ) && filter_var( $_POST['stripeSdk'], FILTER_SANITIZE_NUMBER_INT ) ? $_POST['stripeSdk'] : false );
             $wpsdKeySettings = stripslashes_deep( unserialize( get_option( 'wpsd_key_settings' ) ) );
             $wpsdStripeKey = ( isset( $wpsdKeySettings['wpsd_secret_key'] ) ? $wpsdKeySettings['wpsd_secret_key'] : '' );
@@ -252,7 +235,7 @@ class Wpsd_Front {
             $wpsdEmail = sanitize_email( $_POST['email'] );
             $wpsdAmount = filter_var( $_POST['amount'], FILTER_SANITIZE_STRING );
             $wpsdCurrency = sanitize_text_field( $_POST['currency'] );
-            $comments = sanitize_text_field( $_POST['comments'] );
+            $comments = ( isset( $_POST['comments'] ) ? sanitize_text_field( $_POST['comments'] ) : '' );
             $wpsdGeneralSettings = stripslashes_deep( unserialize( get_option( 'wpsd_general_settings' ) ) );
             $wpsdDonationEmail = ( isset( $wpsdGeneralSettings['wpsd_donation_email'] ) ? $wpsdGeneralSettings['wpsd_donation_email'] : '' );
             $wpsd_disable_donation_email = ( isset( $wpsdGeneralSettings['wpsd_disable_donation_email'] ) ? $wpsdGeneralSettings['wpsd_disable_donation_email'] : '' );
@@ -402,14 +385,31 @@ class Wpsd_Front {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $donorEmailSubject = esc_html( $wpsd_re_email_subject );
         $wsd_email_arr = [
-            'header'   => $wpsd_re_email_heading,
+            'header'   => esc_html( $wpsd_re_email_heading ),
             'name'     => $wpsdName,
             'greeting' => $wpsd_re_email_greeting,
             'item'     => $wpsdDonationFor,
             'amount'   => $wpsdAmount,
             'currency' => $wpsdCurrency,
-            'footer'   => $wpsd_re_email_footnote,
+            'footer'   => esc_html( $wpsd_re_email_footnote ),
         ];
+        if ( $wpsd_display_receipt_logo ) {
+            if ( intval( $wpsd_receipt_logo ) > 0 ) {
+                $logo = wp_get_attachment_image_url(
+                    $wpsd_receipt_logo,
+                    'full',
+                    false,
+                    array(
+                        'class' => 'wpsd-form-banner',
+                    )
+                );
+            }
+            $wsd_email_arr['displayLogo'] = 'On';
+            $wsd_email_arr['logo'] = $logo;
+        }
+        if ( $wpsd_hide_receipt_footnote ) {
+            $wsd_email_arr['hideFootnote'] = 'On';
+        }
         $wpsdEmailTempSettings = get_option( 'wpsd_receipt_email_temp_settings' );
         $wpsd_email_temp_layout = ( isset( $wpsdEmailTempSettings['wpsd_email_temp_layout'] ) ? $wpsdEmailTempSettings['wpsd_email_temp_layout'] : 'default' );
         $donorEmailMessage = $this->get_receipt_email_temp( $wpsd_email_temp_layout, $wsd_email_arr );

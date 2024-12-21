@@ -45,7 +45,7 @@ trait Wpsd_Email_Settings
             ],
             [
                 'name'      => 'wpsd_re_email_greeting',
-                'type'      => 'text',
+                'type'      => 'editor',
                 'default'   => 'Thank you for your payment.',
             ],
             [
@@ -72,6 +72,21 @@ trait Wpsd_Email_Settings
                 'name'      => 'wpsd_re_from_email',
                 'type'      => 'email',
                 'default'   => 'webmaster@yourdomain.com',
+            ],
+            [
+                'name'      => 'wpsd_display_receipt_logo',
+                'type'      => 'boolean',
+                'default'   => false,
+            ],
+            [
+                'name'      => 'wpsd_receipt_logo',
+                'type'      => 'text',
+                'default'   => '',
+            ],
+            [
+                'name'      => 'wpsd_hide_receipt_footnote',
+                'type'      => 'boolean',
+                'default'   => false,
             ],
         ];
     }

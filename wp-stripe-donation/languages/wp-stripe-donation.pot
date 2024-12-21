@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-11-02 13:19+0600\n"
+"POT-Creation-Date: 2024-12-21 05:29+0600\n"
 "PO-Revision-Date: 2021-07-11 01:00+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -57,12 +57,12 @@ msgid "Usage & Tutorial"
 msgstr ""
 
 #: admin/cls-wpsd-admin.php:328 admin/cls-wpsd-admin.php:347
-#: admin/cls-wpsd-admin.php:360 front/view/donors.php:10
+#: admin/cls-wpsd-admin.php:360 front/view/donors.php:14
 msgid "Amount"
 msgstr ""
 
 #: admin/cls-wpsd-admin.php:329 admin/cls-wpsd-admin.php:348
-#: admin/cls-wpsd-admin.php:361 front/view/donors.php:11
+#: admin/cls-wpsd-admin.php:361 front/view/donors.php:15
 msgid "Donation For"
 msgstr ""
 
@@ -77,7 +77,7 @@ msgid "Email"
 msgstr ""
 
 #: admin/cls-wpsd-admin.php:332 admin/cls-wpsd-admin.php:351
-#: admin/cls-wpsd-admin.php:364 front/view/donors.php:13
+#: admin/cls-wpsd-admin.php:364 front/view/donors.php:17
 msgid "Date"
 msgstr ""
 
@@ -86,7 +86,7 @@ msgid "Select All"
 msgstr ""
 
 #: admin/cls-wpsd-admin.php:352 admin/cls-wpsd-admin.php:365
-#: front/view/donors.php:14
+#: front/view/donors.php:18
 msgid "Comments"
 msgstr ""
 
@@ -199,11 +199,13 @@ msgstr ""
 msgid "Disable Admin Email Notification"
 msgstr ""
 
-#: admin/view/general.php:51 admin/view/partial/form-content.php:81
-#: admin/view/partial/receipt-email-content.php:81
-#: admin/view/partial/receipt-email-content.php:103
-#: admin/view/partial/receipt-email-content.php:125
-#: admin/view/partial/receipt-email-content.php:148
+#: admin/view/general.php:51 admin/view/partial/form-content.php:82
+#: admin/view/partial/receipt-email-content.php:99
+#: admin/view/partial/receipt-email-content.php:122
+#: admin/view/partial/receipt-email-content.php:145
+#: admin/view/partial/receipt-email-content.php:169
+#: admin/view/partial/receipt-email-content.php:192
+#: admin/view/partial/receipt-email-content.php:212
 msgid "Please Upgrade Now!"
 msgstr ""
 
@@ -211,57 +213,57 @@ msgstr ""
 msgid "Form Header Title"
 msgstr ""
 
-#: admin/view/general.php:77
+#: admin/view/general.php:78
 msgid "Form Description"
 msgstr ""
 
-#: admin/view/general.php:87
+#: admin/view/general.php:89
 msgid "Donation For Options"
 msgstr ""
 
-#: admin/view/general.php:95
+#: admin/view/general.php:97
 msgid "Use comma \",\" separated values like: Option-1, Option-2"
 msgstr ""
 
-#: admin/view/general.php:100
+#: admin/view/general.php:103
 msgid "Form Amounts"
 msgstr ""
 
-#: admin/view/general.php:108
+#: admin/view/general.php:111
 msgid "Use comma \",\" separated values like: 100,150,200"
 msgstr ""
 
-#: admin/view/general.php:111
+#: admin/view/general.php:114
 msgid "Minimum Amount"
 msgstr ""
 
-#: admin/view/general.php:119
+#: admin/view/general.php:123
 msgid "Form Submit Button Text"
 msgstr ""
 
-#: admin/view/general.php:130
+#: admin/view/general.php:135
 msgid "Currency"
 msgstr ""
 
-#: admin/view/general.php:151
+#: admin/view/general.php:157
 msgid "Redirect Thank You Page"
 msgstr ""
 
-#: admin/view/general.php:157 admin/view/partial/form-content.php:127
-#: admin/view/partial/form-content.php:145
-#: admin/view/partial/form-content.php:166
-#: admin/view/partial/form-content.php:187
-#: admin/view/partial/form-content.php:208
-#: admin/view/partial/form-content.php:229
-#: admin/view/partial/form-content.php:250
-#: admin/view/partial/form-content.php:271
-#: admin/view/partial/form-content.php:289
-#: admin/view/partial/form-content.php:351
-#: admin/view/partial/form-content.php:375
-#: admin/view/partial/form-content.php:399
-#: admin/view/partial/form-content.php:425
-#: admin/view/partial/form-content.php:447
-#: admin/view/partial/form-content.php:465
+#: admin/view/general.php:163 admin/view/partial/form-content.php:128
+#: admin/view/partial/form-content.php:146
+#: admin/view/partial/form-content.php:167
+#: admin/view/partial/form-content.php:188
+#: admin/view/partial/form-content.php:209
+#: admin/view/partial/form-content.php:230
+#: admin/view/partial/form-content.php:251
+#: admin/view/partial/form-content.php:272
+#: admin/view/partial/form-content.php:290
+#: admin/view/partial/form-content.php:352
+#: admin/view/partial/form-content.php:376
+#: admin/view/partial/form-content.php:400
+#: admin/view/partial/form-content.php:426
+#: admin/view/partial/form-content.php:448
+#: admin/view/partial/form-content.php:466
 #: admin/view/partial/form-styles.php:33 admin/view/partial/form-styles.php:52
 #: admin/view/partial/form-styles.php:71 admin/view/partial/form-styles.php:92
 #: admin/view/partial/form-styles.php:120
@@ -284,19 +286,27 @@ msgstr ""
 msgid "Upgrade to Professional!"
 msgstr ""
 
-#: admin/view/general.php:166
-msgid "Enter the slug of your page where it will be redirected after successful payment."
+#: admin/view/general.php:183
+msgid "Select the page that will be redirected after successful payment."
 msgstr ""
 
-#: admin/view/general.php:174
+#: admin/view/general.php:192
 msgid "Exclude Stripe SDK"
 msgstr ""
 
-#: admin/view/general.php:179
+#: admin/view/general.php:197
 msgid "Check this if your form keeps loading!"
 msgstr ""
 
-#: admin/view/general.php:189
+#: admin/view/general.php:203
+msgid "Exclude Security Token"
+msgstr ""
+
+#: admin/view/general.php:208
+msgid "Enable this if you face invalid security token error"
+msgstr ""
+
+#: admin/view/general.php:218
 msgid "Copy that shortcode and apply it in any page to display donation form."
 msgstr ""
 
@@ -312,13 +322,13 @@ msgstr ""
 msgid "Secret Key"
 msgstr ""
 
-#: admin/view/key-settings.php:69 admin/view/partial/form-content.php:482
+#: admin/view/key-settings.php:69 admin/view/partial/form-content.php:483
 #: admin/view/partial/form-styles.php:411
 #: admin/view/partial/form-template.php:53
 #: admin/view/partial/fundraising-content.php:88
 #: admin/view/partial/fundraising-styles.php:96
-#: admin/view/partial/receipt-email-content.php:166
-#: admin/view/partial/receipt-email-template.php:58 admin/view/recaptcha.php:86
+#: admin/view/partial/receipt-email-content.php:238
+#: admin/view/partial/receipt-email-template.php:81 admin/view/recaptcha.php:86
 msgid "Save Settings"
 msgstr ""
 
@@ -330,139 +340,139 @@ msgstr ""
 msgid "Template Color"
 msgstr ""
 
-#: admin/view/partial/form-content.php:35
+#: admin/view/partial/form-content.php:36
 msgid "Display Banner"
 msgstr ""
 
-#: admin/view/partial/form-content.php:43
+#: admin/view/partial/form-content.php:44
 msgid "Banner"
 msgstr ""
 
-#: admin/view/partial/form-content.php:61
+#: admin/view/partial/form-content.php:62
 msgid "Hide All Form Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:71
+#: admin/view/partial/form-content.php:72
 msgid "Hide Donation For"
 msgstr ""
 
-#: admin/view/partial/form-content.php:75
+#: admin/view/partial/form-content.php:76
 msgid "If you hide this, please make sure you must have only one donation for available in general settings."
 msgstr ""
 
-#: admin/view/partial/form-content.php:94
+#: admin/view/partial/form-content.php:95
 msgid "Donate/Payment For Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:103
+#: admin/view/partial/form-content.php:104
 msgid "Name Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:112
+#: admin/view/partial/form-content.php:113
 msgid "Email Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:121
+#: admin/view/partial/form-content.php:122
 msgid "Display Address"
 msgstr ""
 
-#: admin/view/partial/form-content.php:139
+#: admin/view/partial/form-content.php:140
 msgid "Address Street Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:160
+#: admin/view/partial/form-content.php:161
 msgid "Address Line-2 Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:181
+#: admin/view/partial/form-content.php:182
 msgid "Address City Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:202
+#: admin/view/partial/form-content.php:203
 msgid "Address State Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:223
+#: admin/view/partial/form-content.php:224
 msgid "Postal Code Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:244
+#: admin/view/partial/form-content.php:245
 msgid "Country Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:265
+#: admin/view/partial/form-content.php:266
 msgid "Show Comments"
 msgstr ""
 
-#: admin/view/partial/form-content.php:283
+#: admin/view/partial/form-content.php:284
 msgid "Comments Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:304
+#: admin/view/partial/form-content.php:305
 msgid "Show Captcha"
 msgstr ""
 
-#: admin/view/partial/form-content.php:310
+#: admin/view/partial/form-content.php:311
 msgid "Captcha Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:318
+#: admin/view/partial/form-content.php:319
 msgid "Amount Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:327
+#: admin/view/partial/form-content.php:328
 msgid "Other Amount Text"
 msgstr ""
 
-#: admin/view/partial/form-content.php:336
+#: admin/view/partial/form-content.php:337
 msgid "Card Element Label"
 msgstr ""
 
-#: admin/view/partial/form-content.php:345
+#: admin/view/partial/form-content.php:346
 msgid "Form Width"
 msgstr ""
 
-#: admin/view/partial/form-content.php:369
+#: admin/view/partial/form-content.php:370
 msgid "Form Header Type"
 msgstr ""
 
-#: admin/view/partial/form-content.php:382
+#: admin/view/partial/form-content.php:383
 msgid "tdb"
 msgstr ""
 
-#: admin/view/partial/form-content.php:382
+#: admin/view/partial/form-content.php:383
 msgid "Title-Description-Banner"
 msgstr ""
 
-#: admin/view/partial/form-content.php:383
+#: admin/view/partial/form-content.php:384
 msgid "btd"
 msgstr ""
 
-#: admin/view/partial/form-content.php:383
+#: admin/view/partial/form-content.php:384
 msgid "Banner-Title-Description"
 msgstr ""
 
-#: admin/view/partial/form-content.php:384
+#: admin/view/partial/form-content.php:385
 msgid "tbd"
 msgstr ""
 
-#: admin/view/partial/form-content.php:384
+#: admin/view/partial/form-content.php:385
 msgid "Title-Banner-Description"
 msgstr ""
 
-#: admin/view/partial/form-content.php:393
+#: admin/view/partial/form-content.php:394
 msgid "Form Button Width"
 msgstr ""
 
-#: admin/view/partial/form-content.php:417
+#: admin/view/partial/form-content.php:418
 msgid "Display Total Donation Today"
 msgstr ""
 
-#: admin/view/partial/form-content.php:439
+#: admin/view/partial/form-content.php:440
 msgid "Display Condition 1"
 msgstr ""
 
-#: admin/view/partial/form-content.php:459
+#: admin/view/partial/form-content.php:460
 msgid "Condition 1 Text"
 msgstr ""
 
@@ -621,64 +631,84 @@ msgstr ""
 msgid "Donations Number Color"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:20
+#: admin/view/partial/receipt-email-content.php:21
 msgid "Subject"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:25
+#: admin/view/partial/receipt-email-content.php:26
 msgid "We received your payment"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:30
+#: admin/view/partial/receipt-email-content.php:32
 msgid "Heading"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:35
+#: admin/view/partial/receipt-email-content.php:37
 msgid "Receipt from Your Orginazation Name"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:40
+#: admin/view/partial/receipt-email-content.php:43
 msgid "Greeting Message"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:48
+#: admin/view/partial/receipt-email-content.php:51
 msgid "Upgrade to professional!"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:59
+#: admin/view/partial/receipt-email-content.php:62
 msgid "The message you want to say after donor name. e.g. Thank you for your payment."
 msgstr ""
 
 #: admin/view/partial/receipt-email-content.php:64
+msgid "To use donor name apply #donorName# in the content"
+msgstr ""
+
+#: admin/view/partial/receipt-email-content.php:66
+msgid "To use amount apply #donationAmount# in the content"
+msgstr ""
+
+#: admin/view/partial/receipt-email-content.php:72
+msgid "Hide Footnote"
+msgstr ""
+
+#: admin/view/partial/receipt-email-content.php:81
 msgid "Footnote"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:69
+#: admin/view/partial/receipt-email-content.php:86
 msgid "If you have any question, please reply this email."
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:74
+#: admin/view/partial/receipt-email-content.php:92
 msgid "Disable Plugin Receipt Email"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:96
+#: admin/view/partial/receipt-email-content.php:115
 msgid "Disable Stripe Receipt Email"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:118
+#: admin/view/partial/receipt-email-content.php:138
 msgid "From Name"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:133
+#: admin/view/partial/receipt-email-content.php:153
 msgid "Receipt Email Header From Name"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:141
+#: admin/view/partial/receipt-email-content.php:162
 msgid "From Email"
 msgstr ""
 
-#: admin/view/partial/receipt-email-content.php:156
+#: admin/view/partial/receipt-email-content.php:177
 msgid "webmaster@yourdomain.com"
+msgstr ""
+
+#: admin/view/partial/receipt-email-content.php:186
+msgid "Display Receipt Logo"
+msgstr ""
+
+#: admin/view/partial/receipt-email-content.php:206
+msgid "Select Receipt Logo"
 msgstr ""
 
 #: admin/view/partial/receipt-email-template.php:19
@@ -694,7 +724,12 @@ msgid "HTML"
 msgstr ""
 
 #: admin/view/partial/receipt-email-template.php:47
-msgid "For HTML Template Upgrade to Professional"
+#: admin/view/partial/receipt-email-template.php:70
+msgid "Available in Professional"
+msgstr ""
+
+#: admin/view/partial/receipt-email-template.php:64
+msgid "Customized"
 msgstr ""
 
 #: admin/view/recaptcha.php:33
@@ -713,62 +748,50 @@ msgstr ""
 msgid "Receipt Email Settings"
 msgstr ""
 
-#: front/cls-wpsd-front.php:232
+#: front/cls-wpsd-front.php:214
 msgid "Something went wrong!"
 msgstr ""
 
-#: front/cls-wpsd-front.php:300
+#: front/cls-wpsd-front.php:282
 msgid "reCaptcha verification failed!"
 msgstr ""
 
-#: front/cls-wpsd-front.php:417
+#: front/cls-wpsd-front.php:399
 msgid "New Donation Received!"
 msgstr ""
 
-#: front/cls-wpsd-front.php:418
+#: front/cls-wpsd-front.php:400
 msgid "Name: "
 msgstr ""
 
-#: front/cls-wpsd-front.php:419
+#: front/cls-wpsd-front.php:401
 msgid "Email: "
 msgstr ""
 
-#: front/cls-wpsd-front.php:420
+#: front/cls-wpsd-front.php:402
 msgid "Amount: "
 msgstr ""
 
-#: front/cls-wpsd-front.php:421
+#: front/cls-wpsd-front.php:403
 msgid "For: "
 msgstr ""
 
-#: front/view/donors.php:12
+#: front/view/donors.php:16
 msgid "Donor"
 msgstr ""
 
-#: front/view/template/classic.php:9 front/view/template/modern.php:79
+#: front/view/template/classic.php:9 front/view/template/modern.php:47
 msgid "Processing"
 msgstr ""
 
-#: front/view/template/classic.php:74
-msgid "Raised"
-msgstr ""
-
-#: front/view/template/classic.php:75
-msgid "Donations"
-msgstr ""
-
-#: front/view/template/classic.php:76
-msgid "Goal"
-msgstr ""
-
-#: front/view/template/classic.php:304 front/view/template/modern.php:286
-msgid "What is"
-msgstr ""
-
-#: front/view/template/classic.php:340
+#: front/view/template/classic.php:60
 msgid "Total"
 msgstr ""
 
-#: front/view/template/classic.php:340
+#: front/view/template/classic.php:60
 msgid "Donation Today"
+msgstr ""
+
+#: front/view/template/form.php:220
+msgid "What is"
 msgstr ""

@@ -26,7 +26,7 @@ class Wpsd_Master {
      */
     public function __construct() {
         $this->wpsd_version = WPSD_VERSION;
-        add_action( 'plugins_loaded', array($this, WPSD_PRFX . 'load_plugin_textdomain') );
+        add_action( 'init', array($this, WPSD_PRFX . 'load_plugin_textdomain') );
         $this->wpsd_load_dependencies();
         $this->wpsd_trigger_admin_hooks();
         $this->wpsd_trigger_front_hooks();
