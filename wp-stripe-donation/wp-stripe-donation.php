@@ -4,7 +4,7 @@
  * Plugin Name: 	      WordPress Stripe Donation
  * Plugin URI:		      http://wordpress.org/plugins/wp-stripe-donation/
  * Description: 	      Best Donation Plugin for WordPress allows you to collect donation or payment on your website via Stripe payment gateway method.
- * Version: 		        3.2.6
+ * Version: 		        3.2.7
  * Author: 			        HM Plugin
  * Author URI: 		      https://hmplugin.com
  * Requires at least:   5.4
@@ -37,7 +37,7 @@ if ( function_exists('wsd_fs') ) {
     define('WPSD_PRFX', 'wpsd_');
     define('WPSD_CLS_PRFX', 'cls-wpsd-');
     define('WPSD_TXT_DOMAIN', 'wp-stripe-donation');
-    define('WPSD_VERSION', '3.2.6');
+    define('WPSD_VERSION', '3.2.7');
     define('WPSD_TABLE', $wpdb->prefix . 'wpsd_stripe_donation');
 
     require_once WPSD_PATH . "/lib/freemius-integrator.php";
